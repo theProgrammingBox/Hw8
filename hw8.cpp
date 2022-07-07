@@ -1,8 +1,8 @@
 /*************************************************************************
- * AUTHOR     : First Last
+ * AUTHOR     : Justin Gea
  * HW08       : pointers, pointer arithmetic & dynamic memory
  * CLASS      : CS 1C
- * SECTION    : Date & Time
+ * SECTION    : MTWTTH 03:00pm - 05:35pm
 *************************************************************************/
 #include <iostream>
 using namespace std;
@@ -261,9 +261,9 @@ cout << endl;
         cout << ri2 << endl;  // ri2 refers to *qi
         cout << ri3 << endl;  // ri3 refers to qi
         delete pi;            // [4.7] how are the values of ri, ri2, ri3 affected by delete statement?
-        // ri is should be 0, ri2 is should be 0, ri3 is should be 0
+        // ri is should be a random value, ri2 and ri3 should be unaffected by delete pi
         delete [] ri3;        // [4.8] how are the values of ri, ri2, ri3 affected by delete statement?
-        // ri is should be 0, ri2 is should be 0, ri3 is should be 0
+        // ri is should be unaffected by delete ri3, ri2 and ri3 should be a random value
         cout << endl << "ri, ri2, ri3 after delete" << endl << endl;
         cout << ri << endl;
         cout << ri2 << endl;
@@ -316,6 +316,6 @@ cout << endl;
 // Because the pointer is pointing to the first element of the array.
 // Q#5
 // - How is the p_p_tictactoe 2d dynamic array laid out in memory (i.e. why is p_p_tictactoe an int**)?
-// The 2d array is laid out in a contiguous block of memory.
+// The 2d array is laid out in a container of pointers.
 // - Why do we need to pass a pointer to a pointer of type int in the print_2darray_dynamic_pointer function call?
-// Because the pointer is pointing to the first element of the array.
+// Because the address stored is needed to call the separate containers in heap.
